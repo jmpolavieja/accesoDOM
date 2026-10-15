@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso al DOM</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1 class="sombreado">Acceso al DOM</h1>
+    <form id="form-tareas">
+        <input type="text" id="input-titulo" placeholder="Ingrese una tarea">
+        <button>Agregar Tarea</button>
+        <button type="button" id="btn-eliminar">Eliminar Tareas</button>
+    </form>
+    <ul id="lista-tareas"></ul>
+    <hr>
+    <button id="btn-ajax" onclick="cargarUsuarioAJAX()">Cargar <strong>usuario</strong> desde AJAX</button>
+    <div id="uno">Uno</div>
+    <div id="dos">Dos</div>
+    <script src="funciones.js"></script>
+    <script src="ajax.js"></script>
+</body>
+</html>
