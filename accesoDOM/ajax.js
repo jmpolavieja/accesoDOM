@@ -8,10 +8,21 @@ async function cargarUsuarioAJAX() {
     const usuario = await respuesta.json();
     
     // 3. Pintamos en la consola el resultado
-    console.log('AJAX con Fetch Moderno:', usuario.name);
+    console.log('AJAX con Fetch Moderno:', usuario);
+
+    // 4. Pintamos en el div #uno con los datos del usuario
+    const divUno = document.querySelector('#uno');
+    divUno.innerHTML = `
+    <div class="container">
+      <h3>Usuario Cargado:</h3>
+      <p><strong>Nombre:</strong> ${usuario.name}</p>
+      <p><strong>Email:</strong> ${usuario.email}</p>
+      <p><strong>Ciudad:</strong> ${usuario.address.city}</p>
+    </div>
+    `;
   } catch (error) {
     console.error('Error al procesar la petición AJAX:', error);
   }
 }
 
-cargarUsuarioAJAX();
+/* cargarUsuarioAJAX(); */
